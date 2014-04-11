@@ -25,14 +25,9 @@ function doAudio() {
 
 // Image
 function doImage() {
-  var imversion = parseInt(os.release()) >= 12 ? '6.8.8' : '6.6.7';
-  var imhome = join(cwd, "libs", "ImageMagick-" + imversion);
-  var mogrify = join(imhome, 'bin', 'mogrify');
-  var env = { DYLD_LIBRARY_PATH: join(imhome, 'lib'), MAGICK_HOME: imhome }
-  var effect = '-blur 4x2 -negate';
+  var args = 'sips --resampleWidth 400 --resampleWidth 1024';
   var image = join(cwd, 'img', 'xil.jpg');
-  var command = [mogrify, effect, image].join(" ");
-
+  var command = [mogrify, args, image].join(" ");
   exe(command, env);
 }
 
