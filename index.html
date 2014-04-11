@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>xil.</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <img id='xil'>
+        <audio autoplay></audio>
+        <script>
+          var img = document.getElementsByTagName('img')[0];
+          img.src = 'img/xil.jpg?' + Math.random();
+
+          var audio = document.getElementsByTagName('audio')[0];
+          audio.src = 'audio/xil.wav?' + Math.random();
+          audio.addEventListener('ended', function() {
+            window.location.reload();
+          })
+
+        </script>
+        <script>
+          require('./xil.js');
+        </script>
+    </body>
+</html>

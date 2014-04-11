@@ -1,0 +1,13 @@
+{
+  "name": "xil.",
+  "main": "index.html",
+  "window": {
+    "width": 640,
+    "height": 480,
+    "frame": false,
+    "toolbar": false
+  },
+  "dependencies": {
+    "async": "~0.6.2"
+  }
+}
